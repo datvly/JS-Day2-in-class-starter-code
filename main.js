@@ -1,5 +1,5 @@
 /////// Variables Section ///////
-const myName = "Clint Tuttle"
+const myName = "asdfasdfa"
 const fruits = ['apples', 'bananas', 'blueberries', 'strawberries', 'pineapples'];
 const car = [{make:"Toyota", model:"Prius", color:"Silver"},
              {make:"Chevy", model:"Bolt", color:"Blue"}, 
@@ -33,17 +33,13 @@ function testLet(){
   console.log(a);
 }
 
-console.log(a);
-console.log(b);
-console.log("Example using var");
-testVar();
-console.log("Example using LET");
-testLet();
+// console.log(a);
+// console.log(b);
+// console.log("Example using var");
+// testVar();
+// console.log("Example using LET");
+// testLet();
 // When you are done with this section you can comment out the console.logs above
-
-
-
-
 
 
 //////// PART 2 - template literals////////
@@ -51,7 +47,9 @@ const result2Element = document.getElementById('result2');
 
 ////starter code////
 //update code below to using template literals (not concatenation) to pull in the variables myName, color, make, into output
-result2Element.innerHTML = "Hello my name is {yourname} and I drive a {White Honda Civic}";
+// result2Element.innerHTML = "Hello my name is {yourname} and I drive a {White Honda Civic}";
+
+result2Element.innerHTML = `Hello my name is ${myName} and I drive a ${car[1].color} ${car[1].make} ${car[1].model}`;
 
 
 //Footer Section
@@ -59,38 +57,40 @@ const footerElement = document.getElementById("footer");
 //update code below to use template literals to pull in the myName and the current year
 footerElement.innerHTML = "&copy; Clint Tuttle 2024";
 
-
+footerElement.innerHTML = `%copy; ${myName} ${today.getFullYear()}`;
 
 
 
 //////// PART 3 - Ternary Operator////////
 ////section 1 - basic if else statement
-if (loggedIn) {
-    const result3Element = document.getElementById('result3');
-    result3Element.innerHTML = "Welcome back!";
-} else {
-    const result3Element = document.getElementById('result3');
-    result3Element.innerHTML = "Please log in";
-}
+// if (loggedIn) {
+//     const result3Element = document.getElementById('result3');
+//     result3Element.innerHTML = "Welcome back!";
+// } else {
+//     const result3Element = document.getElementById('result3');
+//     result3Element.innerHTML = "Please log in";
+// }
 
 ////Sample code.  You can uncomment this to see how simple a ternaly operator can be
 // loggedIn ? alert("welcome back") : alert("please log in");
 
 ////section 2 -ternary operator to update the result3Element
-
-
+const result3Element = document.getElementById('result3');
+result3Element.innerHTML = loggedIn ? "Howdy back!" : "Please log in";
 
 
 
 //////// PART 4 - Arrow Functions////////
-function Greetings(name) {
-    return `Hello ${name}!`;
-};
+// function Greetings(name) {
+//     return `Hello ${name}!`;
+// };
 
-console.log(Greetings("Clint"));
+// console.log(Greetings("Clint"));
 
 //Make a copy of the above function and rename it GreetingsArrow() and then convert function to an arrow function here
- 
+
+const GreetingsArrow = (name) => `Hello ${name}!`;
+console.log(GreetingsArrow(myName));
 
 
 
@@ -138,7 +138,6 @@ function printFruit() {
  }
 
 //convert the myCar function to use destructuring
-
 
 
 
